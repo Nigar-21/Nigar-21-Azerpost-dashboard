@@ -1,46 +1,103 @@
 import { useState } from 'react';
 import './assets/scss/main.scss';
+import Header from "./components/header"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faMagnifyingGlass,faTableCellsLarge ,faCommentDots} from '@fortawesome/free-solid-svg-icons'
+import { faBars, faMagnifyingGlass,faTableCellsLarge ,faCommentDots,faCircle,faChevronDown,faCircleInfo,faSitemap,faIdCard,faUser,faTable,faTableCells} from '@fortawesome/free-solid-svg-icons'
 import ProfilImage from "./assets/images/download.jpg";
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-   <header>
-
-<div className='first'>
-<button>
-   <FontAwesomeIcon icon={faBars} />
-</button>
-<div className='search'>
-  <div className='searcLine'>
-    <input type="text" placeholder='Search' />
-  </div>
-  <button>
-    <FontAwesomeIcon icon={faMagnifyingGlass} />
-  </button>
-</div>
-</div>
-<div className='second'>
-<button>
-<FontAwesomeIcon icon={faTableCellsLarge} />
-</button>
-<button>
-<FontAwesomeIcon icon={faCommentDots} />
-</button>
-<div className='profile'>
-  <img src={ProfilImage} alt="" />
-</div>
-</div>
-   </header>
+    <Header />
    <aside>
     <div className='logo'>
       <img src={ProfilImage} alt="" />
       <a href="">Antd Admin</a>
        </div>
-       <ul><FontAwesomeIcon icon={faGaugeSimple} /></ul>
+       <ul className='dashboards'>
+        <FontAwesomeIcon icon={faCircle} />
+       Dashboards 
+       <FontAwesomeIcon icon={faChevronDown} />
+       <li>
+      Default
+        </li>
+        <li>
+        Projects
+        </li>
+        <li>
+          eCommerce
+        </li>
+        <li>
+          Marketing
+        </li>
+        <li>
+          Social
+        </li>
+        <li>
+          Bidding
+        </li>
+        <li>
+          Learning
+        </li>
+        <li>
+          Logistics
+        </li>
+       </ul>
+       <span>
+       <FontAwesomeIcon icon={faCircleInfo} />
+       About
+       </span>
+       <span>
+       <FontAwesomeIcon icon={faSitemap} />
+       Sitemap
+       </span>
+       <div className='pages'>
+<span>Pages</span>
+<ul className='corporate'>
+<FontAwesomeIcon icon={faIdCard} />
+Corporate
+<FontAwesomeIcon icon={faChevronDown} />
+<li>
+  About
+</li>
+<li>
+  Team
+</li>
+<li>
+  FAQ
+</li>
+<li>
+  Contact us
+</li>
+<li>
+  Pricing
+</li>
+<li>
+  License
+</li>
+</ul>
+<ul className='userprofile'>
+<FontAwesomeIcon icon={faUser} />
+User profile
+<FontAwesomeIcon icon={faChevronDown} />
+<li>Details</li>
+<li>Preferences</li>
+<li>Information</li>
+<li>Security</li>
+</ul>
+       </div>
+       <div className='Help'>
+        <span>Help</span>
+        <span>
+        <FontAwesomeIcon icon={faTable} />
+        Roadmap
+        </span>
+        <span>
+        <FontAwesomeIcon icon={faTableCells} />
+        Components
+        </span>
+       </div>
    </aside>
     </>
   )
