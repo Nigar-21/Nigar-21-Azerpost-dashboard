@@ -28,13 +28,13 @@ export default function AddPackage() {
     const [trackingId, setTrackingId] = useState("");
     const [filteredData, setFilteredData] = useState(data);
     const [count, setCount] = useState(0);
-    // const handleCheck = () => {
-    //   const filtered = data.filter((item) =>
-    //     item.trackingId.includes(trackingId)
-    //   );
-    //   setFilteredData(filtered);
-    //   setCount(filtered.length);
-    // };
+    const handleCheck = () => {
+      const filtered = data.filter((item) =>
+        item.trackingId.includes(trackingId)
+      );
+      setFilteredData(filtered);
+      setCount(filtered.length);
+    };
   };
 
   return (
@@ -44,14 +44,14 @@ export default function AddPackage() {
         <input value={trackingId} />
         <div className="buttons">
           <span>12</span>
-          {/* <button className="check" onClick={handleCheck}>
+          {<button className="check" onClick={handleCheck}>
             Check
-          </button> */}
+          </button> }
           <button className="status">Change status</button>
         </div>
       </div>
       <div className="data">
-        {/* <CustomTable dataSource={filteredData} /> */}
+        { <CustomTable dataSource={filteredData} /> }
       </div>
     </div>
   );
