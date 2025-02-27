@@ -9,7 +9,7 @@ const contentStyle = {
 };
 const CustomSlider = () => (
  <div className='carousel'>
-     <Carousel autoplay>
+     <Carousel autoplay >
     <div>
         <h3>Aenean Sit Amet</h3>
          <p>Owner: <span>Dael Bulward,</span></p>
