@@ -55,42 +55,6 @@ const Line = () => (
     <Divider orientation="right">Default Dashboard</Divider>
     </>
 );
-// const AutoScroll = () => (
-//     <Carousel autoplay>
-//       <div>
-//         <h3>Aenean Sit Amet</h3>
-//         <p>Owner: <span>Dael Bulward,</span></p>
-//         <p>Client: <span>Topicblab,</span></p>
-//         <p>Priority: <span>Medium,</span></p>
-//         <p>Type: <span>Marketing,</span></p>
-//         <p>Location: <span>Palermo,</span></p>
-//       </div>
-//       <div>
-//       <h3>Mauris Eget Mas</h3>
-//         <p>Owner: <span>Jarrod McLanaghan,</span></p>
-//         <p>Client: <span>Wikibox,</span></p>
-//         <p>Priority: <span>Low,</span></p>
-//         <p>Type: <span>Software Development,</span></p>
-//         <p>Location: <span>Xichangmen,</span></p>
-//       </div>
-//       <div>
-//       <h3>Quis Tortor Id</h3>
-//         <p>Owner: <span> Lyon Spreag,</span></p>
-//         <p>Client: <span>Ntags,</span></p>
-//         <p>Priority: <span>Medium,</span></p>
-//         <p>Type: <span>Research,</span></p>
-//         <p>Location: <span>Brotas,</span></p>
-//       </div>
-//       <div>
-//       <h3>Etiam Vel Augue</h3>
-//         <p>Owner: <span> Keefe Ogan,</span></p>
-//         <p>Client: <span> Gabtune,,</span></p>
-//         <p>Priority: <span>Low,</span></p>
-//         <p>Type: <span>Marketing,</span></p>
-//         <p>Location: <span>Hanzhong,</span></p>
-//       </div>
-//     </Carousel>
-//   );
 export default function Home() {
   return (
    <div className='home'>
@@ -146,8 +110,10 @@ You have 2 projects to finish this week
 </div>
 </div>
 <div className='onGoingProjects'>
-    <h2>Ongoing Projects</h2>
+   <div className='header'>
+   <h2>Ongoing Projects</h2>
     <button>View all</button>
+   </div>
 <CustomSlider/>
 </div>
 <div className='weeklyActivities'>
