@@ -15,7 +15,6 @@ function App() {
     <Header />
     <Sidebar/>
     <CustomContent >
-      {/* <Home/> */}
 
     <AddPackage />
     </CustomContent>
