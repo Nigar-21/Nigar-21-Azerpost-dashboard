@@ -1,4 +1,5 @@
 import { Space, Table, Tag } from 'antd';
+import { useEffect } from 'react';
 const columns = [
   {
     title: 'Tracking Id',
@@ -6,6 +7,11 @@ const columns = [
     key: 'trackingId',
     render: (text) => <a>{text}</a>,
   },
+  {
+  title: 'Name',
+  key: 'Name',
+  dataIndex: 'Name',
+},
   {
     title: 'Company',
     dataIndex: 'Company',
@@ -23,7 +29,11 @@ const columns = [
   },
 ];
 
-const CustomTable = ({data}) =>{ 
+const CustomTable = ({data}) =>{
+    useEffect(() => {
+      console.log(data);
+    })
+    
     return (
         <Table columns={columns} dataSource={data} />
       );
