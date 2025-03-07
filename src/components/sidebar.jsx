@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { BrowserRouter as Router,Routes,Route,Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faMagnifyingGlass,faTableCellsLarge ,faCommentDots,faCircle,faChevronDown,faCircleInfo,faSitemap,faIdCard,faUser,faTable,faTableCells} from '@fortawesome/free-solid-svg-icons'
@@ -6,7 +6,8 @@ import ProfilImage from "../assets/images/download.jpg";
 import Home from "../pages/home";
 import AddPackage from '../pages/AddPackage';
 
-export default function Sidebar() {
+export default function Sidebar({openSidebar}) {
+ 
   const [openMenu, setOpenMenu] = useState({
     dashboards: false,
     corporate: false,
@@ -15,15 +16,18 @@ export default function Sidebar() {
   const toggleMenu = (menu) => {
     setOpenMenu((prev) => ({ ...prev, [menu]: !prev[menu] }));
   };
+  useEffect(() => {
+    if (openSidebar) {
+      document.body.classList.add('sidebar-open');
+    } else {
+      document.body.classList.remove('sidebar-open');
+    }
+  }, [openSidebar]);
+  
   return (
-   <>
-{/* <Sidebar>
-  <Routes>
-    <Route path="/" element={<Home/>} />
-    <Route path="/addPackage" element={<AddPackage/>} />
-  </Routes>
-  </Sidebar> */}
-
+    <>
+   {openSidebar && (
+  
  <aside>
     <div className='logo'>
       <img src={ProfilImage} alt="" />
@@ -105,7 +109,10 @@ User profile
        </div>
        
    </aside>
+   
+   )}
    </>
   )
 
 }
+

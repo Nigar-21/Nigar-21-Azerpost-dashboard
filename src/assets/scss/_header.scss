@@ -5,7 +5,8 @@ height: 64px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-position: sticky;
+position: fixed;
+z-index: 1;
 button{
     padding: 4px 15px;
     border-radius: 6px;

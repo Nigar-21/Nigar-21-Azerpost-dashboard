@@ -9,12 +9,16 @@ import CustomContent from './components/customContent';
 import CustomSlider from './components/customSlider';
 
 function App() {
+  const [openSidebar, setOpenSidebar] = useState(false);
 
+  const toggleSidebar = () => {
+    setOpenSidebar((prev) => !prev);
+  };
   return (
     <Router>
       <>
-        <Header />
-        <Sidebar /> 
+        <Header toggleSidebar={toggleSidebar} />
+        <Sidebar openSidebar={openSidebar} /> 
 
         <Routes>
           <Route path="/" element={<CustomContent><Home /></CustomContent>} />
