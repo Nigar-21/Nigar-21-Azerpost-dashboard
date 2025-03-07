@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faMagnifyingGlass,faTableCellsLarge ,faCommentDots,faCircle,faChevronDown,faCircleInfo,faSitemap,faIdCard,faUser,faTable,faTableCells} from '@fortawesome/free-solid-svg-icons'
 
 import ProfilImage from "../assets/images/download.jpg";
-function Header({toggleSidebar}) {
+function Header({toggleSidebar,openSidebar}) {
 
   return (
      <header>
     
-    <div className='first'>
+    <div className='first' style={{marginLeft: openSidebar ? "250px" : "0"}}>
     <button className='toggleBtn' onClick={toggleSidebar}> 
        <FontAwesomeIcon icon={faBars} />
     </button>

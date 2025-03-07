@@ -4,3 +4,10 @@
 @import"sidebar";
 @import"home";
 @import"addPackage";
+
+.app-container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+}

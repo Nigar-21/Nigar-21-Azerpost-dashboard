@@ -18,13 +18,15 @@ function App() {
   return (
     <Router>
       <>
-        <Header toggleSidebar={toggleSidebar} />
+        <Header toggleSidebar={toggleSidebar} openSidebar={openSidebar} />
+        <div className='app-container'>
         <Sidebar openSidebar={openSidebar} /> 
 
         <Routes>
           <Route path="/" element={<CustomContent><Home /></CustomContent>} />
           <Route path="/addPackage" element={<CustomContent><AddPackage /></CustomContent>} />
         </Routes>
+        </div>
       </>
     </Router>
   )

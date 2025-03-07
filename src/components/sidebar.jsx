@@ -28,7 +28,7 @@ export default function Sidebar({openSidebar}) {
     <>
    {openSidebar && (
   
- <aside>
+ <div className='sidebar'>
     <div className='logo'>
       <img src={ProfilImage} alt="" />
       <a href="https://antd-multipurpose-dashboard.netlify.app/" >Antd Admin</a>
@@ -108,7 +108,7 @@ User profile
         </span>
        </div>
        
-   </aside>
+   </div>
    
    )}
    </>
