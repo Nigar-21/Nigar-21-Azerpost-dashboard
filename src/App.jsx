@@ -13,6 +13,7 @@ function App() {
 
   const toggleSidebar = () => {
     setOpenSidebar((prev) => !prev);
+    
   };
   return (
     <Router>
