@@ -16,13 +16,7 @@ export default function Sidebar({openSidebar}) {
   const toggleMenu = (menu) => {
     setOpenMenu((prev) => ({ ...prev, [menu]: !prev[menu] }));
   };
-  useEffect(() => {
-    if (openSidebar) {
-      document.body.classList.add('sidebar-open');
-    } else {
-      document.body.classList.remove('sidebar-open');
-    }
-  }, [openSidebar]);
+ 
   
   return (
     <>
@@ -31,7 +25,7 @@ export default function Sidebar({openSidebar}) {
  <div className='sidebar'>
     <div className='logo'>
       <img src={ProfilImage} alt="" />
-      <a href="https://antd-multipurpose-dashboard.netlify.app/" >Antd Admin</a>
+      <a href="https://antd-multipurpose-dashboard.netlify.app/" >Azerpost Dashboard</a>
        </div>
        <ul className='dashboards'>
         <span onClick={() => toggleMenu("dashboards")} className="menu-title">

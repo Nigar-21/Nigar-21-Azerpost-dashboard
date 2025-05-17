@@ -2,18 +2,14 @@
     max-width: 250px;
     width: 100%;
     transition: 0.2;
-    // position: fixed;
     padding: 20px 25px;
     background-color: transparent;
     transition: width 0.3s ease-in-out;
     overflow: hidden;
+    overflow-y: auto;
 top: 0;
 left: 0;
-// transform: translateX(-250px); 
-// .sidebar-open {
-//     // transform: translateX(0); 
-//     width: 250px;
-//   }
+
     .icons{
         font-size: 12px;
         transition: font-size 0.2scubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3scubic-bezier(0.645, 0.045, 0.355, 1), color 0.3s;
@@ -30,7 +26,7 @@ left: 0;
         a{
             color: blue;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.5;
             font-family: sans-serif;
          &:focus::after,
